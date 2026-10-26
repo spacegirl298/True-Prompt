@@ -1,0 +1,31 @@
+.summary-screen .btn-primary {
+  margin-top: 8px;
+}
+
+.summary-cost-note {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  margin: 12px 0;
+}
+
+.cached-costs {
+  margin: 28px 0;
+  padding: 20px;
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.cached-costs h3 {
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+}
+
+.cancelled-note {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--danger);
+  border-left: 3px solid var(--danger);
+  padding-left: 10px;
+  margin: 18px 0;
+}

@@ -1,0 +1,7 @@
+.answer-text {
+  white-space: pre-wrap;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: none;
+}

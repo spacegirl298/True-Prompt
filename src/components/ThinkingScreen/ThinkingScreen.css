@@ -1,0 +1,78 @@
+.typing {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 40px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.sparkle {
+  animation: sparkle-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes sparkle-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(0.88) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.08) rotate(20deg); }
+}
+
+.reveal-progress {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.reveal-title {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+}
+
+.reveal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.reveal-card {
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reveal-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+.reveal-value {
+  font-family: var(--font-mono);
+  font-size: 1.02rem;
+  color: var(--ink);
+}
+
+.reveal-note {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  overflow-wrap: anywhere;
+}
+
+.token-note {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sparkle { animation: none; }
+}

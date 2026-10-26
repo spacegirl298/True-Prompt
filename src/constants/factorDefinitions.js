@@ -1,0 +1,42 @@
+// Anchor descriptions to scale the severity of each factor
+export const dimensionFactorDefinitions = {
+  ethical: {
+    thirdPartyConsent: "Uses a real, named person's image/likeness/voice without indicated consent (0=none, 5=explicit unconsented depiction)",
+    privacy: "Discloses or requests personal/private information about someone (0=none, 5=sensitive PII requested)",
+    fairness: "Involves scoring, ranking or characterising people/groups where bias could cause disparate impact (0=none, 5=ranks/screens a protected group)",
+    harm: "Asks for medical, legal, financial or safety decisions (0=general knowledge, 5=direct diagnosis/legal ruling/safety-critical instruction)",
+    deception: "Content intended to be passed off as human-made to mislead a third party (0=for own use, 5=explicit intent to deceive a named third party)",
+    harmfulContent: "Requests content bordering on unsafe/illicit categories (0=clearly safe, 5=crosses into unsafe content)",
+    exploitation: "Uses a specific creator's copyrighted work/dataset without permission (0=original/public domain, 5=explicit reuse of protected work)",
+    labourDisplacement: "Fully substitutes for a specific, well-defined paid occupational task (0=no occupational analogue, 5=fully substitutes a paid task)",
+  },
+  social: {
+    parasocial: "First-person emotional language treating the AI as a companion/confidant (0=purely transactional, 5=explicit companion framing)",
+    judgement: "Suggests the user fears social judgement or is hiding the AI use (0=no secrecy framing, 5=explicit hiding from others)",
+    isolation: "Substitutes for an interaction that would otherwise involve another person (0=no interpersonal analogue, 5=inherently interpersonal task directed only at AI)",
+    skillLoss: "Outsources a skill the user could otherwise practice themselves (0=no transferable skill, 5=core practicable skill fully handed to AI)",
+    frequency: "Language implying repeated/habitual reliance ('again', 'like always') (0=one-off, 5=explicit habitual reliance)",
+  },
+  political: {
+    persuasion: "Seeks content to influence political opinion (0=neutral/factual, 5=explicit persuasive political messaging)",
+    democracy: "Touches voting, elections or democratic processes (0=no electoral content, 5=direct election-related request)",
+    propaganda: "Requests one-sided, emotionally manipulative political content at scale (0=balanced/labelled opinion, 5=explicit propaganda-style request)",
+    misinformation: "Risks generating unverifiable or false political claims (0=verifiable sourced info, 5=unverified claims about political figures/events)",
+    surveillance: "Supports monitoring/tracking of individuals or groups (0=no monitoring element, 5=direct surveillance/tracking capability)",
+    profiling: "Predicts or infers someone's political affiliation/behaviour (0=no inference, 5=explicit prediction of affiliation)",
+    governance: "Shapes or informs public policy/government decisions (0=no policy content, 5=direct policy drafting/analysis)",
+    powerConcentration: "Task only feasible via a few dominant AI providers (0=many small/open alternatives, 5=only feasible via dominant providers)",
+    inequality: "Confers an advantage not equally available to non-AI users (0=no advantage conferred, 5=meaningful uneven advantage)",
+    monetarySupport: "Commercial use materially funding politically-significant institutional power (0=no linkage, 5=materially funds such power)",
+  },
+  authorship: {
+    styleMimicry: "Requests output in the identifiable style of a specific real person (0=no named style, 5=explicit mimicry of an identifiable creator)",
+    creativeLabour: "Task is a category of creative work normally commissioned and paid (0=no commercial analogue, 5=normally paid commission)",
+    factualSynthesis: "Pure factual lookup/summary with no original expression (0=requires original expression, 5=pure factual lookup)",
+    dependencySignal: "Language signalling AI has become the user's habitual creative voice (0=one-off framing, 5=explicit habitual voice framing)",
+    academicIntegrity: "Risks substituting for the user's own submittable academic work (0=clearly tutoring/learning, 5=direct submittable academic work)",
+    creativeAuthorship: "Asks for a complete original creative/artistic work with the user as sole credited author (0=assistive editing/feedback, 5=full original work generated wholesale)",
+    personalIdentity: "Output represents the user's own voice/identity to others (0=not identity-representing, 5=identity document shown to others as the user's own)",
+    humanDisplacement: "Proportion of structure/ideas/wording originating from AI vs the user (0=user supplied most, 5=AI supplied almost all)",
+  },
+};

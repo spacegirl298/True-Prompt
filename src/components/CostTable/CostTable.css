@@ -1,0 +1,37 @@
+.cost-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  margin: 16px 0;
+  color: var(--ink);
+}
+
+.cost-table th,
+.cost-table td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--rule);
+  white-space: nowrap;
+}
+
+.cost-table thead th {
+  color: var(--flag-soft);
+}
+
+.row-aborted {
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.cost-table tfoot td {
+  font-weight: 600;
+  color: var(--flag-soft);
+  border-top: 1px solid var(--flag);
+  border-bottom: 0;
+}

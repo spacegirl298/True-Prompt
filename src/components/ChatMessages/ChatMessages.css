@@ -1,0 +1,110 @@
+.chat-screen {
+  width: 100%;
+  max-width: var(--col);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-thread {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  --thread-gap: 56px;
+  gap: var(--thread-gap);
+  padding: 40px 0 56px;
+}
+
+.scroll-mark {
+  height: 0;
+  margin: calc(var(--thread-gap) / -2) 0;
+  pointer-events: none;
+}
+
+.composer-dock {
+  position: sticky;
+  bottom: 0;
+  padding: 24px 0 18px;
+  background: linear-gradient(180deg, transparent, var(--bg) 30%);
+}
+
+.msg-user {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bubble {
+  max-width: min(75%, 560px);
+  padding: 15px 24px;
+  border-radius: 28px;
+  background: rgba(255, 126, 196, 0.12);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.msg-body {
+  min-width: 0;
+}
+
+.msg-note {
+  color: var(--danger);
+  font-size: 0.95rem;
+}
+
+.receipt-toggle {
+  margin-top: 24px;
+}
+
+.receipt-toggle summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  list-style: none;
+  cursor: pointer;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.02);
+  font-size: 0.85rem;
+  color: var(--flag-soft);
+}
+
+.receipt-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.receipt-toggle summary::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 120ms ease;
+}
+
+.receipt-toggle[open] summary::after {
+  transform: translateY(1px) rotate(-135deg);
+}
+
+.receipt-toggle .receipt {
+  max-width: 520px;
+  border: 0;
+  margin: 0;
+  padding: 20px 0 0;
+}
+
+.receipt-toggle .receipt > .eyebrow-plain {
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .chat-thread { --thread-gap: 40px; padding-top: 24px; }
+  .bubble { max-width: 90%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .receipt-toggle summary::after { transition: none; }
+}

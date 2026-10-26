@@ -1,0 +1,18 @@
+:root {
+  --bg: #09090b;
+  --bg-elevated: #111115;
+  --panel: rgba(18, 18, 22, 0.9);
+  --panel-strong: #19191d;
+  --paper-raised: #121216;
+  --ink: #f7f1f6;
+  --ink-soft: #d2b9c9;
+  --rule: rgba(255, 137, 193, 0.26);
+  --flag: #ff7ec4;
+  --flag-strong: #ff5ca8;
+  --flag-soft: #ffd4ea;
+  --danger: #ff8aa8;
+  --shadow: rgba(255, 126, 196, 0.18);
+
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
